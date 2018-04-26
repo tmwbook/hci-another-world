@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "serve": "parcel serve src",
+    "build": "parcel build src"
+  },
   "dependencies": {
-    "aframe": "^0.8.2",
-    "webpack": "^4.6.0"
+    "aframe": "^0.8.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.7.1"
   }
 }
