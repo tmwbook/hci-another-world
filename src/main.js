@@ -1,1 +1,2 @@
-import aframe from "aframe";
+import "aframe";
+
