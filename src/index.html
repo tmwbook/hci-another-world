@@ -6,11 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Room Mapper</title>
 
-  <script src="main.js"></script>
+  <script defer src="main.js"></script>
 </head>
 <body>
   <a-scene>
     <a-camera position="0 2 0" look-controls wasd-controls></a-camera>
+    
+    <!-- Room box -->
+    <a-plane color="#ffffff" height="10" width="12" position="0 5 -10"></a-plane>
+    <a-plane color="#ffffff" height="10" width="12" position="-10 5 -7.5" rotation="0 30 0"></a-plane>
+    <a-plane color="#ffffff" height="10" width="12" position="10 5 -7.5" rotation="0 -30 0"></a-plane>
+    <a-plane color="#ffffff" height="10" width="4" position="17 5 -4.5"></a-plane>
+    <a-plane color="#ffffff" height="10" width="20" position="19 5 5.5" rotation="0 -90 0"></a-plane>
+
+    <!-- Demo items -->
     <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
     <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
     <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
