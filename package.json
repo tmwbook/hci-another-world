@@ -9,7 +9,9 @@
     "build": "webpack --progress --bail"
   },
   "dependencies": {
-    "aframe": "^0.8.2"
+    "aframe": "^0.8.2",
+    "aframe-text-geometry-component": "^0.5.1",
+    "json-loader": "^0.5.7"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.1",
