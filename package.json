@@ -4,14 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "serve": "webpack-dev-server --hot",
+    "serve": "webpack-dev-server --config webpack.config.js --hot",
     "prebuild": "rimraf dist",
     "build": "webpack --progress --bail"
   },
   "dependencies": {
     "aframe": "^0.8.2",
-    "aframe-text-geometry-component": "^0.5.1",
-    "json-loader": "^0.5.7"
+    "aframe-text-geometry-component": "^0.5.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.1",

@@ -19,10 +19,6 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
-        test: /\.json$/,
-        use: ["json-loader"]
-      },
-      {
         test: /\.(obj|mtl)$/,
         use: ["file-loader"]
       }

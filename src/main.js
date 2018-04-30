@@ -19,20 +19,18 @@ document.addEventListener('keyup', (event) => {
     flag.setAttribute('rotation', '180 0 -90');
     flag.setAttribute('position', '.4 4 0');
     flag.setAttribute('material', 'side', 'double');
-/* FIXME(Tom): the code breaks at loading the font
-    var jsonedFont = require('./font.json');
     var teamNum = document.createElement('a-entity');
     teamNum.setAttribute('text-geometry', 'value', currentTeamNum);
-    teamNum.setAttribute('position', '0 1 0');
+    teamNum.setAttribute("font", "assets/font.json");
+    teamNum.setAttribute('position', '0 5 0');
     currentTeamNum += 1;
-*/
     pole.appendChild(flag);
     var position = camera.object3D.getWorldPosition();
     position.y = 0;
     pole.setAttribute('position', position);
 
-  //  pole.appendChild(teamNum);
-    scene.appendChild(pole);
+   pole.appendChild(teamNum);
+  scene.appendChild(pole);
   }
   console.log(event.keyCode);
 })
