@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Room Mapper</title>
+
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="fake-wood" src="assets/textures/fake_wood.jpg">
+      <img id="sky" src="assets/textures/sky.jpg">
+      <img id="carpet" src="assets/textures/carpet.jpg">
+
+      <a-asset-item id="font" src="assets/font.json"></a-asset-item>
+      <a-asset-item id="desk-obj" src="assets/models/desks/desk_blender.obj"></a-asset-item>
+      <a-asset-item id="desk-mtl" src="assets/models/desks/desk_blender.mtl"></a-asset-item>
+      <a-asset-item id="stand-obj" src="assets/models/stand/stand_blender.obj"></a-asset-item>
+      <a-asset-item id="stand-mtl" src="assets/models/stand/stand_blender.mtl"></a-asset-item>
+    </a-assets>
+
+    <!-- Sky and camera -->
+    <a-camera position="0 4 0" wasd-controls="acceleration: 150">
+    </a-camera>
+    <a-sky src="#sky" theta-length="90"></a-sky>
+
+    <!-- Room box -->
+    <a-plane src="#fake-wood" metalness="0.25" roughness="0.25" repeat="2 0" height="10" width="12" position="0 5 -10" shadow></a-plane>
+    <a-plane src="#fake-wood" metalness="0.25" roughness="0.25" repeat="2 0" height="10" width="12" position="-10 5 -7.5" rotation="0 30 0" shadow></a-plane>
+    <a-plane src="#fake-wood" metalness="0.25" roughness="0.25" repeat="2 0" height="10" width="12" position="10 5 -7.5" rotation="0 -30 0" shadow></a-plane>
+    <a-plane color="#7badce" height="10" width="4" position="17 5 -4.5" shadow></a-plane>
+    <a-plane color="#7badce" height="10" width="20" position="19 5 5.5" rotation="0 -90 0" shadow></a-plane>
+    <a-plane color="#7badce" height="10" width="4" position="-17 5 -4.5" shadow></a-plane>
+    <a-plane color="#7badce" height="10" width="20" position="-19 5 5.5" rotation="0 90 0" shadow></a-plane>
+    <a-plane color="#7badce" height="10" width="38" position="0 5 15.5" rotation="0 180 0" shadow></a-plane>
+
+    <a-plane src="#carpet" roughness="1" repeat="20 8" height="10" width="45" position="-3 0 -5" rotation="-90 0 0"></a-plane>
+    <a-plane src="#carpet" roughness="1" repeat="20 20" height="25" width="40" position="0 0.5 5" rotation="-95 0 0"></a-plane>
+
+    <!-- Stand -->
+    <a-obj-model src="#stand-obj" mtl="#stand-mtl" position="0 1.5 -5" scale="2 2 2" rotation="0 -90 0"></a-obj-model>
+
+    <!-- Desks -->
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="5 1.25 1" scale="1.5 1.5 1.5"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="-5 1.25 1" scale="1.5 1.5 1.5"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="5 1.5 4.5" scale="1.5 1.5 1.5"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="-5 1.5 4.5" scale="1.5 1.5 1.5"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="5 1.75 8" scale="1.5 1.5 1.5"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="-5 1.75 8" scale="1.5 1.5 1.5"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="5 2 11.5" scale="1.5 1.5 1.5"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="-5 2 11.5" scale="1.5 1.5 1.5"></a-obj-model>
+
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="11 1.25 0.25" scale="1.5 1.5 1.5" rotation="0 15 0"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="-11 1.25 0.25" scale="1.5 1.5 1.5" rotation="0 -15 0"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="11 1.5 3.75" scale="1.5 1.5 1.5" rotation="0 15 0"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="-11 1.5 3.75" scale="1.5 1.5 1.5" rotation="0 -15 0"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="11 1.75 7.15" scale="1.5 1.5 1.5" rotation="0 15 0"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="-11 1.75 7.25" scale="1.5 1.5 1.5" rotation="0 -15 0"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="11 2 10.75" scale="1.5 1.5 1.5" rotation="0 15 0"></a-obj-model>
+    <a-obj-model src="#desk-obj" mtl="#desk-mtl" position="-11 2 10.75" scale="1.5 1.5 1.5" rotation="0 -15 0"></a-obj-model>
+  </a-scene>
+<script type="text/javascript" src="app.bundle.6e1d5a91d2348c443edd.js"></script></body>
+</html>
